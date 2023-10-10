@@ -1,0 +1,223 @@
+/* Reset de estilos padrão e configurações iniciais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Definição da raiz (root) do tamanho de fonte para facilitar a unidade 'rem' */
+:root {
+  font-size: 62.5%;
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+  font-size: 1.6rem;
+  background-color: #cecece;
+}
+
+/* Estilos para cabeçalho e rodapé */
+header, footer {
+  width: 100%;
+  background-color: orangered;
+  color: #fff;
+  line-height: 8rem;
+}
+
+/* Configurações para o container dentro de cabeçalho e rodapé */
+header>.container,
+footer>.container {
+  width: 90%;
+  height: 8rem;
+  max-width: 91rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para o título do cabeçalho */
+header h1 {
+  font-style: italic;
+}
+
+/* Estilos para o menu de navegação no cabeçalho */
+header nav {
+  display: none;
+}
+
+/* Estilos para os links do menu de navegação */
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header li a,
+footer a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Estilos para os links do menu de navegação no hover */
+header li a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para o botão do menu mobile */
+#mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: none;
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Estilos para as linhas do botão do menu mobile */
+#mobile-menu-btn span {
+  width: 2.25rem;
+  height: 0.2rem;
+  background-color: #fff;
+}
+
+/* Estilos para o menu mobile */
+#mobile-menu {
+  position: fixed;
+  top: 8rem;
+  left: 0;
+  height: calc(100vh - 8rem);
+  width: 100%;
+  background-color: orangered;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para o menu mobile quando está aberto */
+#mobile-menu.open {
+  display: flex;
+  z-index: 2;
+}
+
+/* Estilos para o menu de navegação dentro do menu mobile */
+#mobile-menu nav {
+  height: 20rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#mobile-menu nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+/* Estilos para os links do menu de navegação dentro do menu mobile */
+#mobile-menu li a {
+  display: block;
+  padding: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Estilos para os links do menu de navegação dentro do menu mobile no hover */
+#mobile-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos gerais para o conteúdo principal da página */
+main {
+  width: 100%;
+}
+
+/* Estilos para o container dentro do conteúdo principal da página */
+main>.container {
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+/* Estilos gerais para seções da página */
+section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para títulos de seção */
+section h2 {
+  color: orangered;
+  font-style: italic;
+  padding: 1rem 0;
+  border-bottom: 2px solid orangered;
+  margin: 1rem 0;
+}
+
+/* Estilos para imagens no carrossel e na seção 'Sobre a loja' */
+#carousel img {
+  max-height: 25rem;
+  object-fit: cover;
+}
+
+#about img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para parágrafos nas seções */
+section p {
+  padding: 1rem 0;
+  word-wrap: break-word;
+}
+
+/* Estilos para o formulário de contato */
+form {
+  max-width: 50rem;
+}
+
+/* Estilos para a área de texto no formulário de contato */
+textarea {
+  resize: none;
+}
+
+/* Estilos para botões */
+.btn {
+  color: #fff;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  background-color: orangered;
+  border: 1px solid orangered;
+}
+
+/* Estilos para botões no hover */
+.btn:hover {
+  color: orangered;
+  border: 1px solid orangered;
+}
+
+/* Estilos responsivos para telas maiores */
+@media (min-width: 640px) {
+  header nav {
+    display: block;
+  }
+
+  #mobile-menu-btn {
+    display: none;
+  }
+
+  /* Estilos para imagens maiores no carrossel */
+  #carousel img {
+    max-height: 50rem;
+    object-fit: cover;
+  }
+}
