@@ -37,6 +37,9 @@ footer>.container {
   align-items: center;
   justify-content: space-between;
 }
+footer>.container {
+  height: unset;
+}
 
 /* Estilos para o título do cabeçalho */
 header h1 {
