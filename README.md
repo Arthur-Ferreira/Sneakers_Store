@@ -1,4 +1,4 @@
-# Fundamentos do Bootstrap
+# Bootstrap Avançado
 
 - Adicionar o Bootstrap em uma página HTML utilizando a CDN;
 - Nesta página HTML crie um formulário de cadastro, este formulário deverá conter os campos:
